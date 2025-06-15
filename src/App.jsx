@@ -3,15 +3,28 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 // Heart shaped confetti particle using canvas approach
 // We'll build a simple confetti animation with hearts using canvas, triggered on click.
-
+import song from './assets/audio/song.mp3';
 // Sample images array (replace with actual URLs or imports)
 const images = [
-  '/src/assets/images/img1.jpg',
-  '/src/assets/images/img2.jpeg'
+  '/src/assets/images/img1.jpeg',
+  '/src/assets/images/img2.jpeg',
+  '/src/assets/images/img3.jpeg',
+  '/src/assets/images/img4.jpeg',
+  '/src/assets/images/img5.jpeg',
+  '/src/assets/images/img6.jpeg',
+  '/src/assets/images/img7.jpeg',
+  '/src/assets/images/img8.jpeg',
+  '/src/assets/images/img9.jpeg',
+  '/src/assets/images/img10.jpeg',
+  '/src/assets/images/img11.jpeg',
+  '/src/assets/images/img12.jpeg',
+  '/src/assets/images/img13.jpeg',
+  '/src/assets/images/img14.jpeg',
+  '/src/assets/images/img15.jpeg',
 ];
 
 // Date to countdown to
-const targetDate = new Date("2025-06-15T23:22:00");
+const targetDate = new Date("2025-06-15T23:00:00");
 
 function pluralize(unit, count) {
   return count === 1 ? unit : unit + "s";
@@ -44,7 +57,7 @@ function Countdown({ target }) {
 
   return (
     <div style={styles.countdownContainer} aria-label="Countdown timer">
-      <h1 style={styles.celebrationText}>Counting down to Your Anniversary</h1>
+      <h1 style={styles.celebrationText}>Counting down to Your Engagement Anniversary</h1>
       <div style={styles.timerGrid}>
         <div style={styles.timerCell}>
           <span style={styles.timeValue}>{timeLeft.days}</span>
@@ -294,11 +307,12 @@ export default function App() {
         <Countdown target={targetDate} />
       ) : (
         <>
-          <h1 style={styles.celebrationText}>Happy Anniversary!</h1>
+          <h1 style={styles.celebrationText}>Happy Engagement Anniversary!</h1>
           <Slideshow images={images} />
           <audio
             ref={audioRef}
-            src="momdad/src/assets/audio/song.mp3"
+            // src="momdad/src/assets/audio/song.mp3"
+            src={ song }
             loop
             autoPlay
             muted
