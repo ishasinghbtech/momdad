@@ -3,28 +3,28 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 // Heart shaped confetti particle using canvas approach
 // We'll build a simple confetti animation with hearts using canvas, triggered on click.
-import song from './assets/audio/song.mp3';
+import song from '/assets/audio/song.mp3';
 // Sample images array (replace with actual URLs or imports)
 const images = [
-  '/src/assets/images/img1.jpeg',
-  '/src/assets/images/img2.jpeg',
-  '/src/assets/images/img3.jpeg',
-  '/src/assets/images/img4.jpeg',
-  '/src/assets/images/img5.jpeg',
-  '/src/assets/images/img6.jpeg',
-  '/src/assets/images/img7.jpeg',
-  '/src/assets/images/img8.jpeg',
-  '/src/assets/images/img9.jpeg',
-  '/src/assets/images/img10.jpeg',
-  '/src/assets/images/img11.jpeg',
-  '/src/assets/images/img12.jpeg',
-  '/src/assets/images/img13.jpeg',
-  '/src/assets/images/img14.jpeg',
-  '/src/assets/images/img15.jpeg',
+  '/assets/images/img1.jpeg',
+  '/assets/images/img2.jpeg',
+  '/assets/images/img3.jpeg',
+  '/assets/images/img4.jpeg',
+  '/assets/images/img5.jpeg',
+  '/assets/images/img6.jpeg',
+  '/assets/images/img7.jpeg',
+  '/assets/images/img8.jpeg',
+  '/assets/images/img9.jpeg',
+  '/assets/images/img10.jpeg',
+  '/assets/images/img11.jpeg',
+  '/assets/images/img12.jpeg',
+  '/assets/images/img13.jpeg',
+  '/assets/images/img14.jpeg',
+  '/assets/images/img15.jpeg',
 ];
 
 // Date to countdown to
-const targetDate = new Date("2025-06-15T23:00:00");
+const targetDate = new Date("2025-06-16T00:00:00");
 
 function pluralize(unit, count) {
   return count === 1 ? unit : unit + "s";
