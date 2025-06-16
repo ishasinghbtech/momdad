@@ -1,19 +1,28 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   base: './',
-  plugins: [
-    react(),
-    visualizer({
-      open: true, // Automatically opens report in browser
-      filename: 'dist/report.html',
-      gzipSize: true,
-      brotliSize: true,
-    })
-  ],
+  plugins: [react()],
 });
+
+
+// import { defineConfig } from 'vite';
+// import react from '@vitejs/plugin-react';
+// import { visualizer } from 'rollup-plugin-visualizer';
+
+// export default defineConfig({
+//   base: './',
+//   plugins: [
+//     react(),
+//     visualizer({
+//       open: true, // Automatically opens report in browser
+//       filename: 'dist/report.html',
+//       gzipSize: true,
+//       brotliSize: true,
+//     })
+//   ],
+// });
 
 
 
